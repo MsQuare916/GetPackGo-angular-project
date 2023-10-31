@@ -1,0 +1,17 @@
+.container-fluid{
+    background-color: bisque;
+}
+.error1{
+    color:red;
+    margin-left:10px;
+}
+.form{
+    margin-left: 30%;
+    padding: 3px;
+}
+
+.flight{
+    margin-left: 10%;
+    margin-bottom: 10%;
+    background-color:aliceblue;
+}

@@ -1,0 +1,94 @@
+<app-user-header></app-user-header>
+<div class="container col-md-6">
+    <div class="imgdiv">
+    <img src="/assets/images/profilePic.jpg" class="image">  
+    </div>
+    <!-- <hr> -->
+    <div class="imgdiv name">
+        {{user.firstName}}
+        {{user.middleName}}
+        {{user.lastName}}
+    </div>
+    <hr>
+    <!-- <div class="button">
+        <button class="btn btn-secondary" (click)="enableForm()" [disabled]="disable">Edit</button>
+    </div> -->
+<form [formGroup]="userForm">  
+    <!-- first name -->
+    <!-- <div class="col"> -->
+        <div class="row">
+        <div class="col">
+            <label for="firstName">First Name</label>
+        </div>
+        <div class="col button">
+            <button class="btn btn-secondary" (click)="enableForm()" [disabled]="disable">Edit</button>
+        </div>
+        </div>
+        <input type="text" class="form-control" formControlName="firstName" id="firstName">
+    <!-- </div> -->
+    <div class="row">
+        <!-- middle name -->
+        <div class="col">
+            <label for="middleName">Middle Name</label>
+            <input type="text" class="form-control" formControlName="middleName" id="middleName">
+        </div>
+        <!-- last name -->
+        <div class="col">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" id="lastName">
+        </div>
+    </div>
+    <div class="row">
+        <!-- emial id -->
+        <div class="col">
+            <label for="primaryMail">Email Id</label>
+            <input type="text" class="form-control" formControlName="primaryMail" id="primaryMail" readonly>
+        </div>
+        <!-- secondary email id -->
+        <div class="col">
+            <label for="secondaryMail">Alternate Email Id</label>
+            <input type="text" class="form-control" formControlName="secondaryMail" id="secondaryMail">
+        </div>
+    </div>
+    <div class="row">
+        <!-- mobile no1 -->
+        <div class="col">
+            <label for="mobileNo1">Mobile Number</label>
+            <input type="text" class="form-control" formControlName="mobileNo1" id="mobileNo1">
+        </div>
+        <!-- mobile no2 -->
+        <div class="col">
+            <label for="mobileNo2">Alternate Mobile Number</label>
+            <input type="text" class="form-control" formControlName="mobileNo2" id="mobileNo2">
+        </div>
+    </div>
+    <!-- address -->
+    <label for="address">Address</label>
+    <input type="text" class="form-control" formControlName="address" id="address">
+    <!-- language -->
+    <label for="preferedLanguage">Prefered Language</label>
+    <input type="text" class="form-control" formControlName="preferedLanguage" id="preferedLanguage">
+    <!-- Gender -->
+    <label for="gender">Gender</label>
+    <!-- <input type="text" class="form-control" formControlName="gender" id="gender"> -->
+    <div class="radio-inline">
+        <input id="gender" type="radio" name="gender" value="male" formControlName="gender">
+        <label class="radio-label"> Male</label><br>
+        <input id="gender" type="radio" name="gender" value="female" formControlName="gender">
+        <label class="radio-label">Female</label>
+    </div>
+    
+    <!-- DOB -->
+    <!-- <label for="dateOfBirth">DOB</label>
+    <input type="Date" class="form-control" formControlName="dateOfBirth" id="dateOfBirth"> -->
+    <!-- Pan card no -->
+    <label for="panCardNo">Pan Card Number</label>
+    <input type="text" class="form-control" formControlName="panCardNo" id="panCardNo">
+    <div class="button gap">
+        <button class="btn" (click)="disableForm()" [disabled]="!disable">Cancle</button>
+        
+        <button class="btn btn-primary" (click)="submit()" [disabled]="!disable">Submit</button>
+    </div>
+</form>
+</div>
+<app-footer></app-footer>

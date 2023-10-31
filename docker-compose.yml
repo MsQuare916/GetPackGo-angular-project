@@ -1,0 +1,129 @@
+version: "3.3"
+services:
+  mysqlservice:
+    image: mysql:5.5
+    ports:
+      - 3306:3306
+    container_name: mysql-container
+    network_mode: host
+    hostname: localhost
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: user
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  mongodbservice:
+    image: mongo:latest
+    container_name: mongo-container
+    network_mode: host
+    hostname: localhost
+    ports:
+      - 27017:27017
+
+  authentication-service:
+    container_name: authentication-service
+    build: authentication-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8085:8085
+    depends_on:
+      - mysqlservice
+      - eurekaserver
+    restart: always
+
+  booking-service:
+    container_name: booking-service
+    build: booking-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8083:8083
+    depends_on:
+      - mongodbservice
+      - eurekaserver
+    restart: always
+
+  email-service:
+    container_name: email-service
+    build: email-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8086:8086
+    depends_on:
+      - mongodbservice
+      - eurekaserver
+    restart: always
+
+  payment-service:
+    container_name: payment-service
+    build: payment-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8088:8088
+    depends_on:
+      - mongodbservice
+      - eurekaserver
+    restart: always
+
+  user-service:
+    container_name: user-service
+    build: user-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8082:8082
+    depends_on:
+      - mongodbservice
+      - eurekaserver
+    restart: always
+
+  supplier-service:
+    container_name: supplier-service
+    build: supplier-service/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8087:8087
+    depends_on:
+      - mongodbservice
+      - eurekaserver
+    restart: always
+     
+  product-webapp:
+    container_name: product-webapp
+    build: product-webapp/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 4200:4200
+    depends_on:
+      - eurekaserver
+    restart: always
+    
+    
+  eurekaserver:
+    container_name: eureka-server
+    image: eureka-server
+    build: eureka-server/
+    restart: always
+    network_mode: host
+    environment:
+      EUREKA_SERVER_PORT: 8761
+    ports:
+      - 8761:8761
+
+  api-gateway:
+    container_name: api-gateway
+    build: api-gateway/
+    hostname: localhost
+    network_mode: host
+    ports:
+      - 8080:8080
+    restart: always
+   
+
+

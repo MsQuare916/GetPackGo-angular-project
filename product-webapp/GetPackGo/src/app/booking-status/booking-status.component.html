@@ -1,0 +1,208 @@
+
+        <div class="header">
+            <nav>
+                <img src="/assets/images/getpackgo.png">
+                <div class="text-box">
+                    <a routerLink="/customer" data-toggle="tooltip" title="Home Page"><p class="pp">Get Pack Go</p></a>
+                </div>
+                <ul>
+                    <li><a routerLink="/customer">Home</a></li>
+                    <li><a routerLink="/bookingstatus">History</a></li>
+                    <li><a href="" (click)="logout()">Log out</a></li>
+                    <li><a routerLink="/user/profile" data-toggle="tooltip" title="Profile"><i class="fa fa-fw fa-user"></i></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+<!-- 
+   <div class="container1" >
+    <h2 >Your Booking Details</h2>
+   </div>
+   <div class="container2">
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-bordered table-striped" text-align="center">
+        <thead class="thead">
+          <tr>
+            <th scope="col">Booking Id</th>
+            <th scope="col" >Service Type</th>
+            <th scope="col">Name</th>
+            <th scope="col"> Service Details</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Departure</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Date Of Journey</th>
+            <th scope="col">Date Of Booking</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let disc of bookings;let i=index">
+        <td><i style="font-size:24px" class="fa">&#xf2bb;</i>{{disc.bookingId}}</td>
+        <td *ngIf="disc.serviceType==='Flight'"><i style="font-size:24px" class="fa">&#xf072;</i></td>
+        <td *ngIf="disc.serviceType==='Trains'"><i style="font-size:24px" class="fa">&#xf238;</i></td>
+        <td *ngIf="disc.serviceType==='Bus'"><i style="font-size:24px" class="fa">&#xf207;</i></td>
+        <td *ngIf="disc.serviceType==='hotels'"></td>
+        <td><i style='font-size:24px' class='fas'>&#xf2bd;</i>{{disc.name}}</td>
+        <td *ngIf="disc.serviceType==='Flight'" ><span>{{disc.flights.flightName}}</span>({{disc.flights.flight_id}})</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_location}}</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.arrival_location}}</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_time}}</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.arrival_time}}</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_date}}</td> 
+        <td *ngIf="disc.serviceType==='Flight'" >{{disc.flights.booking_date}}</td> 
+      
+        <td *ngIf="disc.serviceType==='Trains'" ><span>{{disc.trains.trainName}}</span>({{disc.trains.trainNo}})</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_location}}</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.arrival_location}}</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_time}}</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.arrival_time}}</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_date}}</td>
+        <td *ngIf="disc.serviceType==='Trains'" >{{disc.trains.booking_date}}</td>
+
+        <td *ngIf="disc.serviceType==='Bus'" ><span>{{disc.bus.busName}}</span>{{disc.bus.busNo}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_location}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.arrival_location}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_time}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.arrival_time}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_date}}</td> 
+        <td *ngIf="disc.serviceType==='Bus'" >{{disc.bus.booking_date}}</td> 
+
+
+        <td>
+          <button  (click)="CancelBooking(disc,i)"   *ngIf="!disc.booking_cancelled"  class="btn-btn-danger">Cancel</button>
+          <div *ngIf="disc.booking_cancelled">
+            Cancelled
+          </div>
+        </td>   
+        </tr>
+        </tbody>
+        </table>
+        </div>
+    
+    </div>
+    <div class="button">
+
+      <a routerLink="/customer" class="btn btn-primary">Go To Home</a>
+    </div>
+  </div>
+ -->
+
+
+  
+<div class="container mt-3">
+    <div class="card1" >
+      <div class="card-header">
+   <h2>Your Booking Details</h2>
+      </div>
+    </div>
+    <div class="card2 mt-2"style="margin:20px;">
+      <div class="card-body">
+      <!-- <b>Booking Id</b> &nbsp;
+      <b>Service Type</b> &nbsp;
+      <b>Name</b> &nbsp;
+      <b>Service Details</b> &nbsp;
+      <b>FROM</b>&nbsp;
+      <b>To</b>&nbsp;
+      <b>Departure</b> &nbsp;
+      <b>Arrival</b> &nbsp;
+      <b>Date Of Journey</b>&nbsp;
+      <b>Booking Date</b> &nbsp; -->
+      <pre>
+      <b>Booking ID</b>    <b>ServiceType</b>   <b>Service Details</b>            <b>From</b>            <b>To</b>        <b>Departure Time</b>  <b>Arrival Time</b>  <b>Date Of Journey</b>   <b>Booking Date</b>   
+      </pre>
+      </div>
+    </div>
+    <div  *ngFor="let disc of bookings;let i=index">
+      <div class="card mt-2" >
+        <div class="card-body1 mt-2">
+          <b class="booking" style="margin-right:70px"><i style="font-size:24px" class="fa">&#xf2bb;</i>{{disc.bookingId}}</b>
+          <b class="booking" style="margin-right:70px"*ngIf="disc.serviceType==='Flight'"><i style="font-size:24px" class="fa">&#xf072;</i></b>
+          <b class="booking" style="margin-right:70px"*ngIf="disc.serviceType==='Trains'"><i style="font-size:24px" class="fa">&#xf238;</i></b>
+          <b class="booking" style="margin-right:70px" *ngIf="disc.serviceType==='Bus'"><i style="font-size:24px" class="fa">&#xf207;</i></b>
+          <b class="booking" style="margin-right:100px" *ngIf="disc.serviceType==='hotels'"></b>
+          <!-- <b><i style='font-size:24px' class='fas'>&#xf2bd;</i>{{disc.name}}</b> -->
+          <b class="booking"style="margin-right:85px" *ngIf="disc.serviceType==='Flight'" ><span>{{disc.flights.flightName}}</span>({{disc.flights.flight_id}})</b> 
+          <b class="booking" style="margin-right:85px"*ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_location}}</b> 
+          <b class="booking" style="margin-right:70px"*ngIf="disc.serviceType==='Flight'" >{{disc.flights.arrival_location}}</b> 
+          <b class="booking" style="margin-right:30px" *ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_time}}</b> 
+          <b class="booking" style="margin-right:45px"*ngIf="disc.serviceType==='Flight'" >{{disc.flights.arrival_time}}</b> 
+          <b class="booking" style="margin-right:45px" *ngIf="disc.serviceType==='Flight'" >{{disc.flights.departure_date}}</b> 
+          <b class="booking" *ngIf="disc.serviceType==='Flight'" >{{disc.flights.booking_date}}</b> 
+        
+          <b class="booking" style="margin-right:70px"*ngIf="disc.serviceType==='Trains'" ><span>{{disc.trains.trainName}}</span>({{disc.trains.trainNo}})</b>
+          <b class="booking" style="margin-right:75px" *ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_location}}</b>
+          <b class="booking" style="margin-right:70px"*ngIf="disc.serviceType==='Trains'" >{{disc.trains.arrival_location}}</b>
+          <b class="booking"style="margin-right:30px" *ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_time}}</b>
+          <b class="booking" style="margin-right:45px"*ngIf="disc.serviceType==='Trains'" >{{disc.trains.arrival_time}}</b>
+          <b class="booking" style="margin-right:45px"*ngIf="disc.serviceType==='Trains'" >{{disc.trains.departure_date}}</b>
+          <b class="booking" *ngIf="disc.serviceType==='Trains'" >{{disc.trains.booking_date}}</b>
+  
+          <b class="booking" style="margin-right:85px" *ngIf="disc.serviceType==='Bus'" ><span>{{disc.bus.busName}}</span>{{disc.bus.busNo}}</b> 
+          <b class="booking" style="margin-right:85px" *ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_location}}</b> 
+          <b class="booking"  style="margin-right:70px"*ngIf="disc.serviceType==='Bus'" >{{disc.bus.arrival_location}}</b> 
+          <b class="booking" style="margin-right:30px"*ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_time}}</b> 
+          <b class="booking"style="margin-right:45px" *ngIf="disc.serviceType==='Bus'" >{{disc.bus.arrival_time}}</b> 
+          <b class="booking"style="margin-right:45px" *ngIf="disc.serviceType==='Bus'" >{{disc.bus.departure_date}}</b> 
+          <b class="booking" *ngIf="disc.serviceType==='Bus'" >{{disc.bus.booking_date}}</b> 
+
+          <!-- <div class="bton">
+          <button  (click)="CancelBooking(disc,i)"   *ngIf="!disc.booking_cancelled"  class="btn-btn-danger">Cancel</button>
+          <div *ngIf="disc.booking_cancelled">
+            Cancelled
+          </div>
+          </div> -->
+        </div>
+        <button  (click)="CancelBooking(disc,i)"   *ngIf="!disc.booking_cancelled"  class="btn-btn-secondary">Cancel</button>
+          <inline-div  *ngIf="disc.booking_cancelled" style="color:red; text-align: right;" >
+            Cancelled
+          </inline-div>
+      </div>
+          
+    </div>
+    
+</div>
+
+
+<!-- <head>
+    <title>Footer Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head> -->
+<!-- <body> -->
+  <div class="footer-app">
+  <footer class="footer">
+    <div class="container1">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a routerLink=#>About Us</a></li>
+                    <li><a routerLink=#>Contact Us</a></li>
+                    <li><a routerLink=#>Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a routerLink=#>FAQ</a></li>
+                    <li><a routerLink=#>Order Status</a></li>
+                    <li><a routerLink=#>Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a routerLink="#"><i class="fab fa-facebook-f"></i></a>
+                    <a routerLink="#"><i class="fab fa-twitter"></i></a>
+                    <a routerLink="#"><i class="fab fa-instagram"></i></a>
+                    <a routerLink="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  </div>
+<!-- </body> -->

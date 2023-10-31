@@ -1,0 +1,292 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "fid": "dd",
+      "fname": "dd",
+      "fdepname": "dd",
+      "fdeptime": "5:00",
+      "farrname": "dd",
+      "farrtime": "6:00",
+      "ftime": "5",
+      "fcost": 55,
+      "id": 2
+    },
+    {
+      "fid": "dd",
+      "fname": "ff",
+      "fdepname": "ff",
+      "fdeptime": "5:00",
+      "farrname": "ff",
+      "farrtime": "5:50",
+      "ftime": "5",
+      "fcost": 6000,
+      "id": 3
+    },
+    {
+      "fid": "",
+      "fname": "",
+      "fdepname": "",
+      "fdeptime": "",
+      "farrname": "",
+      "farrtime": "",
+      "ftime": "",
+      "fcost": "",
+      "id": 4
+    },
+    {
+      "fid": "",
+      "fname": "",
+      "fdepname": "",
+      "fdeptime": "",
+      "farrname": "",
+      "farrtime": "",
+      "ftime": "",
+      "fcost": "",
+      "id": 5
+    },
+    {
+      "hid": "",
+      "hname": "",
+      "haddress": "",
+      "hownername": "",
+      "hoomcostperday": "",
+      "hsummary": "",
+      "id": 6
+    },
+    {
+      "flightId": "hdhhd",
+      "departureAirportName": "vvv",
+      "fdeptime": "",
+      "farrname": "",
+      "farrtime": "",
+      "ftime": "",
+      "fcost": "",
+      "departureTime": "",
+      "arrivalAirportName": "vvd",
+      "arrivalTime": "6:00",
+      "flightTime": "",
+      "flightCost": 2000,
+      "id": 7
+    },
+    {
+      "flightId": "",
+      "departureAirportName": "",
+      "departureTime": "",
+      "arrivalAirportName": "",
+      "arrivalTime": "",
+      "flightTime": "",
+      "flightCost": "",
+      "id": 8
+    },
+    {
+      "flightId": null,
+      "departureAirportName": null,
+      "departureTime": null,
+      "arrivalAirportName": null,
+      "arrivalTime": null,
+      "flightTime": null,
+      "flightCost": null,
+      "id": 9
+    },
+    {
+      "flightId": "",
+      "departureAirportName": "",
+      "departureTime": "",
+      "arrivalAirportName": "",
+      "arrivalTime": "",
+      "flightTime": "",
+      "flightCost": "",
+      "id": 10
+    },
+    {
+      "hotelId": "",
+      "hotelAddress": "",
+      "hostelName": "",
+      "hostelOwnerName": "",
+      "roomCostPerDay": "",
+      "summary": "",
+      "id": 11
+    },
+    {
+      "hotelId": "fff",
+      "hotelAddress": "ggg",
+      "hostelName": "hhhh",
+      "hostelOwnerName": "hhhgff",
+      "roomCostPerDay": 5555,
+      "summary": "hhhg",
+      "id": 12
+    },
+    {
+      "trainId": "",
+      "trainName": "",
+      "departurePlatformName": "",
+      "departureTime": "",
+      "trainJourneyDetails": "",
+      "arrivalPlatformName": "",
+      "arrivalTime": "",
+      "trainCost": "",
+      "id": 13
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 14
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 15
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 16
+    },
+    {
+      "trainId": "",
+      "trainName": "",
+      "departurePlatformName": "",
+      "departureTime": "",
+      "trainJourneyDetails": "",
+      "arrivalPlatformName": "",
+      "arrivalTime": "",
+      "trainCost": "",
+      "id": 17
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 18
+    },
+    {
+      "busId": null,
+      "busName": null,
+      "departureStation": null,
+      "departureTime": null,
+      "busJourneyDetails": null,
+      "arrivalStation": null,
+      "arrivalTime": null,
+      "cost": null,
+      "id": 19
+    },
+    {
+      "hotelId": "ff",
+      "hotelAddress": "ff",
+      "hostelName": "ff",
+      "hostelOwnerName": "ff",
+      "roomCostPerDay": 58222,
+      "summary": "ff",
+      "id": 20
+    },
+    {
+      "hotelId": "",
+      "hotelAddress": "",
+      "hostelName": "",
+      "hostelOwnerName": "",
+      "roomCostPerDay": "",
+      "summary": "",
+      "id": 21
+    },
+    {
+      "trainId": "",
+      "trainName": "",
+      "departurePlatformName": "",
+      "departureTime": "",
+      "trainJourneyDetails": "",
+      "arrivalPlatformName": "",
+      "arrivalTime": "",
+      "trainCost": "",
+      "id": 22
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 23
+    },
+    {
+      "busId": "",
+      "busName": "",
+      "departureStation": "",
+      "departureTime": "",
+      "busJourneyDetails": "",
+      "arrivalStation": "",
+      "arrivalTime": "",
+      "cost": "",
+      "id": 24
+    },
+    {
+      "flightId": "1",
+      "departureAirportName": "",
+      "departureTime": "",
+      "arrivalAirportName": "",
+      "arrivalTime": "",
+      "flightTime": "",
+      "flightCost": "",
+      "id": 25
+    },
+    {
+      "flightId": null,
+      "departureAirportName": null,
+      "departureTime": null,
+      "arrivalAirportName": null,
+      "arrivalTime": null,
+      "flightTime": null,
+      "flightCost": null,
+      "id": 26
+    },
+    {
+      "hotelId": "555",
+      "hotelAddress": "hhh",
+      "hostelName": "ggg",
+      "hostelOwnerName": "fff",
+      "roomCostPerDay": 555,
+      "summary": "hhh",
+      "id": 27
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

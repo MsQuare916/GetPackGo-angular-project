@@ -1,0 +1,62 @@
+<app-user-header></app-user-header>
+<div class="container-fluid">
+    <!-- <div class="form">
+     <div class="row">
+       <div class="col-md-6">
+           <form [formGroup]="trainform" (ngSubmit)="onSubmit(trainform)">
+               <div class="mt-2">
+                   From : &nbsp;<input text="text" formControlName="tdepname" placeholder="Enter From Station Name">
+                   <span class="error1" *ngIf="trainform.controls.tdepname.touched && trainform.controls.tdepname.invalid 
+                               && trainform.controls.tdepname.errors.required"> Enter From Station Name</span>
+               </div>
+               <div class="mt-2 ml-3">
+                   To &nbsp;: &nbsp;<input text="text" formControlName="tarrname" placeholder="Enter Arrival Station Name">
+                   <span class="error1" *ngIf="trainform.controls.tarrname.touched && trainform.controls.tarrname.invalid
+                               && trainform.controls.tarrname.errors.required"> Enter Arrival Station Name </span>
+               </div>
+           <div class="mt-3 ml-5">
+              <button class="btn btn-primary text-center ml-5" >Submit</button>
+           </div>
+       </form>
+       </div>
+   </div>
+    </div> -->
+     <div class="row">
+         <div class="row mt-5">
+             <div class="train">
+                 <h2 style="text-align:center; color: red; padding-bottom: 2rem;">Train Details</h2> 
+                 <table class="table table-striped">
+                     
+                     <thead>
+                       <tr>
+                         <th scope="col">Train Id</th>
+                         <th scope="col">Train Name</th>
+                         <th scope="col">Departure Station</th>
+                         <th scope="col">Departure Time</th>
+                         <th scope="col">Train Journey Details</th>
+                         <th scope="col">Arrival Station</th>
+                         <th scope="col">Arrival Time</th>
+                         <th scope="col">Train Cost</th>
+                         <th scope="col"></th>
+                       </tr>
+                     </thead>
+                     <tbody *ngFor="let data of searchTrains">
+                       <tr>
+                         <th scope="row">{{data.trainId}}</th>
+                         <td>{{data.trainName}}</td>
+                         <td>{{data.departurePlatformName}}</td>
+                         <td>{{data.departureTime}}</td>
+                         <td>{{data.trainJourneyDetails}}</td>
+                         <td>{{data.arrivalPlatformName}}</td>
+                         <td>{{data.arrivalTime}}</td>
+                         <td>{{data.trainCost}}</td>
+                         <td><button (click)="bookNow(data)">Book Now</button></td>
+                       </tr>
+     
+                     </tbody>
+                   </table>
+             </div>
+         </div>
+     </div>
+ </div>
+ <app-footer></app-footer>

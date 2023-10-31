@@ -1,0 +1,272 @@
+<!--Flight-->
+<div class="tabs">
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+    <label for="tab1" class="tabs__label">Flight</label>
+    <div class="tabs__content header col-lg-12">
+
+      <!--<div class="header col-lg-12"></div>-->
+      
+      <div class="container">
+        
+          <h5><b>Welcome to GetPackGo Flight Services</b></h5>
+        
+        <hr/>
+        <form [formGroup]="myform1">
+            
+          Email Id : &nbsp;  <input type="email" formControlName="emailId" placeholder="Enter Email Id ">
+              <br/> <span class="error1" *ngIf="myform1.controls.emailId.touched && myform1.controls.emailId.invalid && myform1.controls.emailId.errors.required">Enter Email Id</span>
+              <br/>
+
+            Flight Id : &nbsp;  <input type="text" formControlName="flightId" placeholder="Enter Flight Id ">
+              <br/> <span class="error1" *ngIf="myform1.controls.flightId.touched && myform1.controls.flightId.invalid && myform1.controls.flightId.errors.required">Enter Flight Id</span>
+              <br/>
+     
+            Flight Name :&emsp;  <input type="text" formControlName="flightName" placeholder="Enter Flight Name"><br/>
+            <small class="error1" *ngIf="myform1.controls.flightName.touched && myform1.controls.flightName.invalid && myform1.controls.flightName.errors.required">Enter Flight Name</small>  
+        
+            <br/>
+     
+            Departure Airport Name  <input type="text" formControlName="departureAirportName" placeholder="Enter Departure Airport Name" style="float:right"><br/>
+            <small class="error1" *ngIf="myform1.controls.departureAirportName.touched && myform1.controls.departureAirportName.invalid && myform1.controls.departureAirportName.errors.required">Enter Flight Departure Name</small> 
+            <br/>
+     
+           Flight Departure Time  <input type="text" formControlName="departureTime" placeholder="Enter Flight Departure Time">
+            <br/> <span class="error1" *ngIf="myform1.controls.departureTime.touched && myform1.controls.departureTime.invalid && myform1.controls.departureTime.errors.required">Enter Flight Departure Time</span>
+            <br/>
+
+            Flight start Time : &nbsp;  <input type="text" formControlName="startTime" placeholder="Enter Flight starting Time">
+            <br/> <span class="error1" *ngIf="myform1.controls.startTime.touched && myform1.controls.startTime.invalid && myform1.controls.startTime.errors.required">Enter Flight Starting Time</span>
+            <br/>
+     
+            Arrival Airport Name :&emsp;  <input type="text" formControlName="arrivalAirportName" placeholder="Enter Arrival Airport Name"><br/>
+            <small class="error1" *ngIf="myform1.controls.arrivalAirportName.touched && myform1.controls.arrivalAirportName.invalid && myform1.controls.arrivalAirportName.errors.required">Enter Flight Arrival Name</small>  
+            <br/>
+     
+            Flight Arrival Time : &nbsp;  <input type="text" formControlName="arrivalTime" placeholder="Enter Flight Arrival Time">
+            <br/> <span class="error1" *ngIf="myform1.controls.arrivalTime.touched && myform1.controls.arrivalTime.invalid && myform1.controls.arrivalTime.errors.required">Enter Flight Arrival Time</span>
+            <br/>
+
+            Flight End Time : &nbsp;  <input type="text" formControlName="endTime" placeholder="Enter Flight ending Time">
+            <br/> <span class="error1" *ngIf="myform1.controls.endTime.touched && myform1.controls.endTime.invalid && myform1.controls.endTime.errors.required">Enter Flight Ending Time</span>
+            <br/>
+            
+            <!-- Flight Time : &nbsp;  <input type="text" formControlName="flightTime" placeholder="Enter Flight Time">
+            <br/> <span class="error1" *ngIf="myform1.controls. flightTime.touched && myform1.controls. flightTime.invalid && myform1.controls. flightTime.errors.required">Enter Flight  Time</span>
+            <br/> -->
+     
+            Flight Cost: &nbsp;  <input type="number" formControlName="flightCost" placeholder="Enter Flight Cost"><br/>
+            <br/> <span class="error1" *ngIf="myform1.controls.flightCost.touched && myform1.controls.flightCost.invalid && myform1.controls.flightCost.errors.required">Enter Flight Cost</span>
+            <br/>
+            <button type="submit" class="btn btn-primary mb-3" (click)='addFlight()'>Submit</button>
+          
+        </form>
+      
+      </div>
+      <!--
+        <div class="footer mt-5">
+          <p> @Copyright-GetPackGo.com</p>
+        </div>
+      -->
+      </div>
+  
+    
+  <!--Hotel-->
+  
+    
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+    <label for="tab2" class="tabs__label">Hotel</label>
+    <div class="tabs__content header col-lg-12">
+      <div class="container">
+        <!--<div class="header col-lg-12">-->
+          <h5><b>Welcome to GetPackGo Hotel Services</b></h5>
+        
+        
+        <hr/>
+        <form [formGroup]="myform2">
+
+          Email Id : &nbsp;  <input type="email" formControlName="emailId" placeholder="Enter Email Id ">
+              <br/> <span class="error1" *ngIf="myform2.controls.emailId.touched && myform2.controls.emailId.invalid && myform2.controls.emailId.errors.required">Enter Email Id</span>
+              <br/>
+            
+              Hotel Id : &nbsp;  <input type="text" formControlName="hotelId" placeholder="Enter Hotel Id ">
+              <br/> <span class="error1" *ngIf="myform2.controls.hotelId.touched && myform2.controls.hotelId.invalid && myform2.controls.hotelId.errors.required">Enter Hotel Id</span>
+              <br/>
+      
+            Hotel Name :&emsp;  <input type="text" formControlName="hotelName" placeholder="Enter Hotel Name"><br/>
+            <small class="error1" *ngIf="myform2.controls.hotelName.touched && myform2.controls.hotelName.invalid && myform2.controls.hotelName.errors.required">Enter Hotel Name</small>  
+        
+            <br/>
+      
+            Hotel address :&emsp;  <input type="text" formControlName="hotelAddress" placeholder="Enter Hotel Address"><br/>
+            <small class="error1" *ngIf="myform2.controls.hotelAddress.touched && myform2.controls.hotelAddress.invalid && myform2.controls.hotelAddress.errors.required">Enter hotel address</small>  
+            <br/>
+      
+           Hotel Owner name : &nbsp;  <input type="text" formControlName="hotelOwnerName" placeholder="Enter hotel owner name">
+            <br/> <span class="error1" *ngIf="myform2.controls.hotelOwnerName.touched && myform2.controls.hotelOwnerName.invalid && myform2.controls.hotelOwnerName.errors.required">Enter hotel owner name</span>
+            <br/>
+      
+            Room cost per day :&emsp;  <input type="number" formControlName="roomCostPerDay" placeholder="Enter room cost per day"><br/>
+            <span class="error1" *ngIf="myform2.controls.roomCostPerDay.touched && myform2.controls.roomCostPerDay.invalid && myform2.controls.roomCostPerDay.errors.required">Enter room cost per day</span>  
+            <br/>
+      
+            Summary: &nbsp;  <input type="text" formControlName="summary" placeholder="Enter hotel summary"><br/>
+            <br/> <span class="error1" *ngIf="myform2.controls.summary.touched && myform2.controls.summary.invalid && myform2.controls.summary.errors.required">Enter hotel summary</span>
+            <br/>
+            
+            
+            <button type="submit" class="btn btn-primary mb-3" (click)='addHotel()'>Submit</button>
+                
+            
+        </form>
+        </div>
+        <!--
+        <div class="footer mt-5">
+          <p> @Copyright-GetPackGo.com</p>
+        </div>
+        -->
+      </div>
+     <!--</div>-->
+  
+
+  <!--Train-->
+
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab3" checked>
+    <label for="tab3" class="tabs__label">Train</label>
+    <div class="tabs__content header col-lg-12">
+      
+       <!--<div class="header col-lg-12">-->
+      <div class="container">
+        
+          <h5><b>Welcome to GetPackGo Train Services</b></h5>
+        
+        <hr/>
+        <form [formGroup]="myform3">
+
+          Email Id : &nbsp;  <input type="email" formControlName="emailId" placeholder="Enter Email Id ">
+              <br/> <span class="error1" *ngIf="myform3.controls.emailId.touched && myform3.controls.emailId.invalid && myform3.controls.emailId.errors.required">Enter Email Id</span>
+              <br/>
+            
+              Train Id : &nbsp;  <input type="text" formControlName="trainId" placeholder="Enter Train Id ">
+              <br/> <span class="error1" *ngIf="myform3.controls.trainId.touched && myform3.controls.trainId.invalid && myform3.controls.trainId.errors.required">Enter Train Id</span>
+              <br/>
+     
+            Train Name :&emsp;  <input type="text" formControlName="trainName" placeholder="Enter Train Name"><br/>
+            <small class="error1" *ngIf="myform3.controls.trainName.touched && myform3.controls.trainName.invalid && myform3.controls.trainName.errors.required">Enter Train Name</small>  
+        
+            <br/>
+     
+            Departure Platform Name :&emsp;  <input type="text" formControlName="departurePlatformName" placeholder="Enter Departure platform Name"><br/>
+            <small class="error1" *ngIf="myform3.controls.departurePlatformName.touched && myform3.controls.departurePlatformName.invalid && myform3.controls.departurePlatformName.errors.required">Enter Train Departure platform Name</small>  
+            <br/>
+     
+           Departure Time : &nbsp;  <input type="text" formControlName="departureTime" placeholder="Enter Departure Time">
+            <br/> <span class="error1" *ngIf="myform3.controls.departureTime.touched && myform3.controls.departureTime.invalid && myform3.controls.departureTime.errors.required">Enter Departure Time</span>
+            <br/>
+     
+            Arrival Platform Name :&emsp;  <input type="text" formControlName="arrivalPlatformName" placeholder="Enter Arrival platform Name"><br/>
+            <small class="error1" *ngIf="myform3.controls.arrivalPlatformName.touched && myform3.controls.arrivalPlatformName.invalid && myform3.controls.arrivalPlatformName.errors.required">Enter  Arrival platform Name</small>  
+            <br/>
+     
+            Arrival Time : &nbsp;  <input type="text" formControlName="arrivalTime" placeholder="Enter Arrival Time">
+            <br/> <span class="error1" *ngIf="myform3.controls.arrivalTime.touched && myform3.controls.arrivalTime.invalid && myform3.controls.arrivalTime.errors.required">Enter Arrival Time</span>
+            <br/>
+        
+     
+            Train Cost: &nbsp;  <input type="number" formControlName="trainCost" placeholder="Enter Train Cost">
+            <br/> <span class="error1" *ngIf="myform3.controls.trainCost.touched && myform3.controls.trainCost.invalid && myform3.controls.trainCost.errors.required">Enter Train Cost</span>
+            <br/>
+<!--
+            Train Journey Details : &nbsp;  <input type="text" formControlName="trainJourneyDetails" placeholder="Enter Train journey Details"><br/>
+            <br/> <span class="error1" *ngIf="myform3.controls.trainJourneyDetails.touched && myform3.controls.trainJourneyDetails.invalid && myform3.controls.trainJourneyDetails.errors.required">Enter Train journey Details</span>
+            <br/>
+
+-->
+            <button type="submit" class="btn btn-primary mb-3" (click)='addTrain()'>Submit</button>
+               
+            
+        </form>
+      </div>
+      <!--
+        <div class="footer mt-5">
+          <p> @Copyright-GetPackGo.com</p>
+        </div>
+        -->
+      </div>
+    
+    
+
+    <!--Bus-->
+
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab4" checked>
+    <label for="tab4" class="tabs__label">Bus</label>
+    <div class="tabs__content header col-lg-12">
+      
+       <!--<div class="header col-lg-12">-->
+      <div class="container">
+        
+          <h5><b>Welcome to GetPackGo Bus Services</b></h5>
+        
+        <hr/>
+        <form [formGroup]="myform4">
+
+          Email Id : &nbsp;  <input type="email" formControlName="emailId" placeholder="Enter Email Id ">
+              <br/> <span class="error1" *ngIf="myform4.controls.emailId.touched && myform4.controls.emailId.invalid && myform4.controls.emailId.errors.required">Enter Email Id</span>
+              <br/>
+            
+            Bus Id : &nbsp;  <input type="text" formControlName="busId" placeholder="Enter Bus Id ">
+              <br/> <span class="error1" *ngIf="myform4.controls.busId.touched && myform4.controls.busId.invalid && myform4.controls.busId.errors.required">Enter Bus Id</span>
+              <br/>
+     
+            Bus Name :&emsp;  <input type="text" formControlName="busName" placeholder="Enter Bus Name"><br/>
+            <small class="error1" *ngIf="myform4.controls.busName.touched && myform4.controls.busName.invalid && myform4.controls.busName.errors.required">Enter Bus Name</small>  
+        
+            <br/>
+     
+            Departure Station :&emsp;  <input type="text" formControlName="departureStation" placeholder="Enter Departure station Name"><br/>
+            <small class="error1" *ngIf="myform4.controls.departureStation.touched && myform4.controls.departureStation.invalid && myform4.controls.departureStation.errors.required">Enter Bus Departure station Name</small>  
+            <br/>
+     
+           Departure Time : &nbsp;  <input type="text" formControlName="departureTime" placeholder="Enter Departure Time">
+            <br/> <span class="error1" *ngIf="myform4.controls.departureTime.touched && myform4.controls.departureTime.invalid && myform4.controls.departureTime.errors.required">Enter Departure Time</span>
+            <br/>
+     
+            Arrival Station :&emsp;  <input type="text" formControlName="arrivalStation" placeholder="Enter Arrival station Name"><br/>
+            <small class="error1" *ngIf="myform4.controls.arrivalStation.touched && myform4.controls.arrivalStation.invalid && myform4.controls.arrivalStation.errors.required">Enter  Arrival stationName</small>  
+            <br/>
+     
+            Arrival Time : &nbsp;  <input type="text" formControlName="arrivalTime" placeholder="Enter Arrival Time">
+            <br/> <span class="error1" *ngIf="myform4.controls.arrivalTime.touched && myform4.controls.arrivalTime.invalid && myform4.controls.arrivalTime.errors.required">Enter Arrival Time</span>
+            <br/>
+        
+     
+            Bus Cost: &nbsp;  <input type="number" formControlName="cost" placeholder="Enter Bus Cost">
+            <br/> <span class="error1" *ngIf="myform4.controls.cost.touched && myform4.controls.cost.invalid && myform4.controls.cost.errors.required">Enter Bus Cost</span>
+            <br/>
+<!--
+            Bus Journey Details : &nbsp;  <input type="text" formControlName=" busJourneyDetails" placeholder="Enter Bus journey Details"><br/>
+            <br/> <span class="error1" *ngIf="myform4.controls.busJourneyDetails.touched && myform4.controls.busJourneyDetails.invalid && myform4.controls.busJourneyDetails.errors.required">Enter Bus journey Details</span>
+            <br/>
+-->
+            <button type="submit" class="btn btn-primary mb-3" (click)='addBus()'>Submit</button>
+          
+            
+        </form>
+      </div>
+      <!--
+        <div class="footer mt-5">
+          <p> @Copyright-GetPackGo.com</p>
+        </div>
+        -->
+      </div>
+  
+      
+      <div class="alert alert-success d-flex align-items-center" role="alert" *ngIf="alert" style="position:absolute; margin-bottom:-3cm; bottom:0; right:0">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+          Success in posting the service
+        </div>
+      </div>
+    
+    
+
+    

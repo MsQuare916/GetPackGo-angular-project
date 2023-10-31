@@ -1,0 +1,16 @@
+.container-fluid{
+    background-color: bisque;
+}
+.error1{
+    color:red;
+    margin-left:5px;
+}
+.form{
+    margin-left: 28%;
+    padding: 3px;
+}
+.hotel{
+    margin-left: 15%;
+    margin-bottom: 10%;
+    background-color:aliceblue;
+}

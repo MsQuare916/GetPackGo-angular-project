@@ -1,0 +1,49 @@
+.body{
+    background-color: rgb(249, 186, 186);
+}
+.form-control{
+    background-color: rgb(239, 231, 246);
+    max-height: 30px;
+}
+.cloumn{
+    float:left;
+    width: 50%;
+}
+.row::after{
+    content: "";
+    display:table;
+    clear: both;
+}
+.split{
+    width:80%;
+    margin-left: 4%;
+}
+.form-label{
+    max-width: 50%;
+    text-align: center;
+}
+
+.title{
+    font-size: 50px;
+    /* background-color: rgb(219, 85, 83); */
+}
+.h2{
+    margin-left: 25%;
+    font-weight: bold;
+}
+.error1{
+    text-transform: lowercase;
+    color: red;
+    font-style: italic;
+}
+.button{
+    text-align: right;
+}
+.btn-primary{
+    text-align: left;
+    margin-bottom: 5px;
+}
+.btn-danger, .btn-secondary{
+    margin-left: 2px;
+    margin-bottom: 5px;
+}

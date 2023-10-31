@@ -1,0 +1,13 @@
+<div class="text-center" id="button">
+    <button class="btn btn-success" (click)="proceed(100)">Pay with Razorpay</button>
+</div>
+
+<div class="novopay-response-modal modal fade" role="dialog" [ngClass]="{'show': showModal}" id="response-modal"
+    [ngStyle]="{'display': 'none'}">
+    {{response}}
+</div>
+
+<div class="razorpay-response-modal modal fade" role="dialog" [ngClass]="{'show': showModal}" id="razorpay-response"
+    [ngStyle]="{'display': 'none'}">
+    {{razorpayResponse}}
+</div>

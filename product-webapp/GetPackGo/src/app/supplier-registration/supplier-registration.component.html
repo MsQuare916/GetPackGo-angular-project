@@ -1,0 +1,125 @@
+<app-header></app-header>
+<body class="body">
+    <div class="title">
+        <h2 class="h2">{{title}}</h2>
+        <hr>
+    </div>
+    <div class="container col-md-6">
+    <form [formGroup] = "myform">
+        <!--first name-->
+        <div class="form-group">
+            <label for="firstName">First Name</label><br/>
+            <input type="text" class="form-control" formControlName = "firstName" id="firstName">
+            <div class = "error1" *ngIf = "myform.controls.firstName.touched && myform.controls.firstName.invalid && myform.controls.firstName.errors.required">*REQUIRED FIELD</div>
+            <div class="error1" *ngIf = "myform.controls.firstName.errors?.containsSpace">*NO WHITE SPACE SHOULD BE PRESENT</div>
+        </div>
+
+        <div class="row">
+            <!--middle name-->
+            <div class="col">
+                <div class="form-group">
+                    <label for="middleName">Middle Name(Optional)</label><br/>
+                    <input type="text" class="form-control" formControlName = "middleName" id="middleName">
+                    <!-- <div class = "error1" *ngIf = "myform.controls.middleName.touched && myform.controls.middleName.invalid && myform.controls.middleName.errors.required">*REQUIRED FIELD</div> -->
+                    <div class="error1" *ngIf = "myform.controls.middleName.errors?.containsSpace">*NO WHITE SPACE SHOULD BE PRESENT</div>
+                </div>
+            </div>
+
+            <!--last name-->
+            <div class="col">
+                <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name</label><br/>
+                        <input type="text" class="form-control" formControlName = "lastName" id="lastName">
+                        <div class = "error1" *ngIf = "myform.controls.lastName.touched && myform.controls.lastName.invalid && myform.controls.lastName.errors.required">*REQUIRED FIELD</div>
+                        <div class="error1" *ngIf = "myform.controls.lastName.errors?.containsSpace">*NO WHITE SPACE SHOULD BE PRESENT</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--User profile pic-->
+        <!--<div class="form-group">
+            <label for="photo">User Profile Pic</label><br>
+            <input type="file" class="form-control" id="photo" formControlName="photo">
+        </div>-->
+
+        <!--Email id-->
+        <div class="form-group">
+            <label for="primaryMail">Email Id</label><br/>
+            <input type="email" class="form-control" formControlName = "primaryMail" id="primaryMail">
+            <div class = "error1" *ngIf = "myform.controls.primaryMail.touched && myform.controls.primaryMail.invalid && myform.controls.primaryMail.errors.required">*REQUIRED FIELD</div>
+            <div class="error1" *ngIf="myform.controls.primaryMail.errors?.email">*EMAIL ID IS INVALID</div>
+        </div>
+
+        <!--Alternate email id-->
+        <!--<div class="form-group">
+            <label for="secondaryMail">Alrernate Email Id</label><br/>
+            <input type="email" class="form-control" formControlName = "secondaryMail" id="secondaryMail">
+            <div class = "error1" *ngIf = "myform.controls.secondaryMail.touched && myform.controls.secondaryMail.invalid && myform.controls.secondaryMail.errors.required">*REQUIRED FIELD</div>
+            <div class="error1" *ngIf="myform.controls.secondaryMail.errors?.email">*EMAIL ID IS INVALID</div>
+        </div>-->
+
+        <!--mobile number-->
+        <div class="form-group">
+            <label for="mobileNo1">Contact Number</label><br/>
+            <input type="text" class="form-control" formControlName="mobileNo1" id="mobileNo1">
+            <div class = "error1" *ngIf = "myform.controls.mobileNo1.touched && myform.controls.mobileNo1.invalid && myform.controls.mobileNo1.errors.required">*REQUIRED FIELD</div>
+            <div class="error1" *ngIf="myform.controls.mobileNo1.errors?.pattern">*CONTACT NUMBER IS INVALID</div>
+        </div>
+
+        <!--Alternate mobile number-->
+        <!--<div class="form-group">
+            <label for="mobileNo2">Alternate Contact Number</label><br/>
+            <input type="text" class="form-control" formControlName="mobileNo2" id="mobileNo2">
+            <div class="error1" *ngIf="myform.controls.mobileNo2.errors?.pattern">*CONTACT NUMBER IS INVALID</div>
+        </div>-->
+
+        <!--prefered language-->
+        <!--<div class="form-group">
+            <div class="form-check">
+                <label for="">Prefered Language</label><br>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" formControlName="preferedLanguage">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  English
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" formControlName="preferedLanguage">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Hindi
+                </label>
+              </div>
+        </div>-->
+
+        <!--password-->
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input type="password" class="form-control" formControlName="password" id="password">
+            <div class="error1" *ngIf = "myform.controls.password.touched && myform.controls.password.invalid && myform.controls.password.errors.required">*REQUIED FIELD</div>
+            <div class="error1" *ngIf="myform.controls.password.errors?.pattern">*PASSWORD SHOULD CONTAIN ATLEAST ONE OF BOTH UPPERCASE AND LOWERCASE LETTERS, NUMBERS AND SPECIAL CHARACTERS</div>
+            <div class="error1" *ngIf="myform.controls.password.errors?.pattern">*PASSWORD SHOULD CONTAIN ATLEAST 8 LETTERS</div>
+            
+        </div>
+
+        <!--confirm password-->
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label><br>
+            <input type="password" class="form-control" formControlName="confirmPassword" id="confirmPassword">
+            <div class="error1" *ngIf="myform.controls.confirmPassword.touched && myform.controls.confirmPassword.invalid && myform.controls.confirmPassword.errors.required">*REQUIED FIELD</div>
+            <div class="error1" *ngIf="myform.controls.confirmPassword.errors?.pattern">*PASSWORD SHOULD CONTAIN ATLEAST ONE OF BOTH UPPERCASE AND LOWERCASE LETTERS, NUMBERS AND SPECIAL CHARACTERS</div>
+            <div class="error1" *ngIf="myform.controls.confirmPassword.errors?.pattern">*PASSWORD SHOULD CONTAIN ATLEAST 8 LETTERS</div>
+            <!--<div class="error1" *ngIf="myform.controls.confirmPassword.errors?.isPasswordEqual">*ENTERED PASSWORD IS NOT SAME AS THE PASSWORD</div>
+            -->
+        </div>
+
+        <div class="button">
+            <button class="btn btn-primary" routerLink="/user/register">Sign up as user</button>
+        <!--submit button-->
+        <button class="btn btn-danger" (click) = "reg()">Submit</button>
+
+        <!--clear button-->
+        <button class="btn btn-secondary" (click)="clear()">Clear</button>
+        </div>
+    </form>
+</div>
+</body>
+<app-footer></app-footer>

@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+     database: db
+     port: 27017
+     host: localhost
+  application:
+    name: user-service
+server:
+ port: 8082

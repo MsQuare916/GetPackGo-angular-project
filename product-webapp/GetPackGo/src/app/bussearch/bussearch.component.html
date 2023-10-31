@@ -1,0 +1,65 @@
+<app-user-header></app-user-header>
+<div class="container-fluid">
+    
+    <!-- <div class="form">
+      <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="busform" (ngSubmit)="onSubmit(busform)">
+                <div class="mt-2">
+                    From : &nbsp;<input text="text" formControlName="bdepname" placeholder="Enter From Station Name">
+                    <span class="error1" *ngIf="busform.controls.bdepname.touched && busform.controls.bdepname.invalid 
+                                && busform.controls.bdepname.errors.required"> Enter From Station Name</span>
+                </div>
+                <div class="mt-2">
+                    To &nbsp;&nbsp; &nbsp;: &nbsp;<input text="text" formControlName="barrname" placeholder="Enter Arrival Station Name">
+                    <span class="error1" *ngIf="busform.controls.barrname.touched && busform.controls.barrname.invalid
+                                && busform.controls.barrname.errors.required"> Enter Arrival Station Name </span>
+                </div>
+            <div class="mt-4 ml-5">
+               <button class="btn btn-primary text-center ml-5 mt -3" >Search</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div> -->
+  
+      <div class="row">
+          <div class="row mt-5">
+              <div class="bus">
+                  <h2 style="text-align:center; color: red; padding-bottom: 2rem;">Bus Details</h2> 
+                  <table class="table table-striped">
+                      
+                      <thead>
+                        <tr>
+                          <th scope="col">Bus Id</th>
+                          <th scope="col">Bus Name</th>
+                          <th scope="col">Departure Station</th>
+                          <th scope="col">Departure Time</th>
+                          <th scope="col">Bus Journey Details</th>
+                          <th scope="col">Arrival Station</th>
+                          <th scope="col">Arrival Time</th>
+                          <th scope="col">Bus Cost</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody *ngFor="let data of searchBuses">
+                        <tr>
+                          <th scope="row">{{data.busId}}</th>
+                          <td>{{data.busName}}</td>
+                          <td>{{data.departureStation}}</td>
+                          <td>{{data.departureTime}}</td>
+                          <td>{{data.busJourneyDetails}}</td>
+                          <td>{{data.arrivalStation}}</td>
+                          <td>{{data.arrivalTime}}</td>
+                          <td>{{data.cost}}</td>
+                          <td><button (click)="bookNow(data)">Book Now</button></td>
+                        </tr>
+      
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+  
+  </div>
+ <app-footer></app-footer> 

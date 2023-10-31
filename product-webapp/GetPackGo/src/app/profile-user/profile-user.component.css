@@ -1,0 +1,22 @@
+.image{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.imgdiv{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.name{
+    font-size: 20px;
+}
+.button{
+    text-align: right;
+    margin-bottom: 1px;
+}
+.gap{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

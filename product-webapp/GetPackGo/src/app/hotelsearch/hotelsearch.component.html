@@ -1,0 +1,52 @@
+<app-user-header></app-user-header>
+<div class="container-fluid">
+    <!-- <div class="form">
+      <div class="row mt-5">
+        <div class="col-md-6">
+            <form [formGroup]="hotelform" (ngSubmit)="onSubmit(hotelform)">
+                <div class="mt-2">
+                    Hotel Name : &nbsp;<input text="text" formControlName="hname" placeholder="Enter Hotel Name">
+                    <span class="error1" *ngIf="hotelform.controls.hname.touched && hotelform.controls.hname.invalid 
+                                && hotelform.controls.hname.errors.required"> Enter Hotel Name</span>
+                </div>
+            <div class="mt-2 ml-5">
+               <button class="btn btn-primary text-center ml-5" >Search</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    </div> -->
+    <div class="row mt-5">
+        <div class="hotel">
+            <h2 style="text-align:center; color: red; padding-bottom: 2rem;">Hotel Details</h2> 
+            <table class="table table-striped">
+                
+                <thead>
+                  <tr>
+                    <th scope="col">Hotel Id</th>
+                    <th scope="col">Hotel Name</th>
+                    <th scope="col">Hotel Address</th>
+                    <th scope="col">Hotel Owner Name</th>
+                    <th scope="col">Room Cost Per Day</th>
+                    <th scope="col">Summary</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let data of searchHotels">
+                  <tr>
+                    <th scope="row">{{data.hotelId}}</th>
+                    <td>{{data.hotelName}}</td>
+                    <td>{{data.hotelAddress}}</td>
+                    <td>{{data.hotelOwnerName}}</td>
+                    <td>{{data.roomCostPerDay}}</td>
+                    <td>{{data.summary}}</td>
+                    <td><button (click)="bookNow(data)">Book Now</button></td>
+                  </tr>
+
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

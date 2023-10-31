@@ -1,0 +1,17 @@
+.container-fluid{
+    background-color: bisque;
+}
+.error1{
+    color:red;
+    margin-left:10px;
+}
+.form{
+    margin-left: 35%;
+    padding: 3px;
+}
+
+.train{
+    margin-left: 25%;
+    margin-bottom: 10%;
+    background-color:aliceblue;
+}

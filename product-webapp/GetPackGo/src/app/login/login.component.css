@@ -1,0 +1,81 @@
+.container{ 
+    background-color: rgb(242, 237, 231);
+    padding: 50px;
+    border-radius: 10px; 
+    padding-block-end: 60px;
+    margin: auto;
+    justify-content: center; 
+  }
+  body,
+  html {
+    block-size: 100px;
+  }
+  h1{
+    font-size: 2.0em;
+  }
+  .login-body{
+    padding-block-start: 80px;
+    background-image: linear-gradient(45deg,rgb(164, 239, 164) , rgb(129, 129, 245));
+    /* background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).webp"); */
+    block-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    justify-content: center;
+  }
+   h1,h6{
+    text-align: center;
+  
+  }
+  .input-icons i {
+    position: absolute;
+  }
+  .input-icons {
+    inline-size: 100%;
+    margin-block-end: 10px;
+  }
+  .col-md-4{
+      margin: auto;
+  }
+  .icon {
+    padding: 15px;
+    min-inline-size: 10px;
+  }
+  
+  .form-control {
+    inline-size: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .form-control{
+     background-image: linear-gradient(rgb(198, 198, 238));
+  }
+  .bt{
+    text-align: center;
+  }
+  .btn{
+    inline-size: 100%;
+  } 
+  /* @media all and (max-inline-size: 900px) {
+    .container{
+      display: block;
+      inline-size: auto;
+      inline-size: 100%;
+    }
+  } */
+  .error{
+    color: red;
+  }
+  input.ng-invalid{
+    border-inline-end: 5px solid red;
+  }
+  input.ng-valid{
+    border-inline-end: 5px solid green;
+  }
+  .rb{
+     padding: 5px;
+     border-inline-end: 5px;
+     text-align: center;
+     word-spacing: 15px;
+      }
